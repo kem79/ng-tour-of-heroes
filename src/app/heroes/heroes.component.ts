@@ -9,12 +9,7 @@ import { MessageService} from '../message.service';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  selectedHero: Hero;
   heroes: Hero[];
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add('HeroService: Select hero id=' + hero.id);
-  }
 
   constructor(private heroService: HeroService, private messageService: MessageService) { }
 
